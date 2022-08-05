@@ -1,0 +1,16 @@
+{
+  "name": "polymorphic-relationship-using-sequelize",
+  "version": "1.0.0",
+  "description": "Example of ploymorphic relationship using postgres and sequelize",
+  "main": "index.js",
+  "author": "Aayush Kurup",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.2"
+  }
+}
