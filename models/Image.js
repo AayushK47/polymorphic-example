@@ -2,7 +2,8 @@ const Sequelize = require('sequelize');
 
 const conn = require('../db');
 
-const Image = conn.define('images', {
+class Image extends Sequelize.Model {}
+Image.init({
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -17,6 +18,6 @@ const Image = conn.define('images', {
         type: Sequelize.STRING,
         allowNull: false,
     }
-});
+}, { sequelize: conn, modelName: 'images' });
 
 module.exports = Image;

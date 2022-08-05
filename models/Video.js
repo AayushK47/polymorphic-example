@@ -2,7 +2,8 @@ const Sequelize = require('sequelize');
 
 const conn = require('../db');
 
-const Video = conn.define('videos', {
+class Video extends Sequelize.Model {}
+Video.init({
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -17,6 +18,6 @@ const Video = conn.define('videos', {
         type: Sequelize.STRING,
         allowNull: false,
     }
-});
+}, { sequelize: conn, modelName: 'videos' });
 
 module.exports = Video;
